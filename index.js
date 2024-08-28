@@ -7,7 +7,8 @@ const server = CorsAnywhere.createServer({
     'Content-Type',
     'Accept',
     'Client-ID'
-  ]
+  ],
+  preflightMaxAge: 86400, // Cache preflight response for 1 day
 });
 
 const PORT = process.env.PORT || 3000;
